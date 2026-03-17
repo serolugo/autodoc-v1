@@ -32,7 +32,7 @@ def next_tile_number(csv_path: Path) -> int:
     rows = read_tile_index(csv_path)
     if not rows:
         return 1
-    numbers = [int(r["tile_number"]) for r in rows if r.get("tile_number", "").strip().isdigit()]
+    numbers = [int(r["tile_number"], 16) for r in rows if r.get("tile_number", "").strip()]
     return max(numbers) + 1 if numbers else 1
 
 
@@ -53,7 +53,7 @@ def append_tile_index_row(
         writer = csv.writer(f)
         if is_empty:
             writer.writerow(TILE_INDEX_HEADER)
-        writer.writerow([f"{tile_number:04d}", tile_id, tile_name, tile_author])
+        writer.writerow([f"{tile_number:04X}", tile_id, tile_name, tile_author])
 
 
 # ──────────────────────────────────────────────
