@@ -163,7 +163,7 @@ Also updates:
 ## Tile ID format
 
 ```
-<id_prefix>-<YYMMDD><tile_number:04d><id_version><id_revision>
+<id_prefix>-<YYMMDD><tile_number:04h><id_version><id_revision>
 ```
 
 Example: `MST130-01-26031500010101`
