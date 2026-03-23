@@ -18,7 +18,7 @@ pip install PyYAML
 ## Installation
 
 ```bash
-git clone https://github.com/youruser/autodoc.git
+[git clone https://github.com/serolugo/autodoc-v1.git]
 cd autodoc
 pip install PyYAML
 python tests/runner.py  # verify: 30 passed, 0 failed
